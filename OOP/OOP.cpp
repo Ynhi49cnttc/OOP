@@ -19,11 +19,11 @@ public:
     virtual double Acreage() = 0; //create a purely virtual Acreage layer
     virtual double landMoney() = 0; //create a purely virtual landMoney layer
     void xuat() {
-        cout << "The name of seller: " << Name << endl;
-        cout << "Land location: " << Address << endl;
-        cout << "Land perimeter: " << Perimeter() << " meters" << endl;
-        cout << "Land acreage: " << Acreage() << " square meters" << endl;
-        cout << "Land price is sold " << Address << ": " << landMoney() << " USD" << endl;
+        cout << Name << endl;
+        cout << Address << endl;
+        cout << Perimeter() << endl;
+        cout << Acreage() << endl;
+        cout << landMoney() << " USD" << endl;
     }
 };
 
@@ -94,11 +94,6 @@ int main() {
     string address;
     char ch;
     vector<SellingLand*> sl;
-    cout << "Enter the type of land you want to sell!\n";
-    cout << "C: is circular land     Q: is quadrilateral shaped land\n";
-    cout << "Enter the seller's name: " << endl;
-    cout << "Enter land location (Address 1, Address 2 or Address 3): " << endl;
-    cout << "Enter the data of the land type: " << endl;
     while (cin >> ch) {
         cin.ignore();
 
@@ -119,7 +114,6 @@ int main() {
     }
 
     for (int i = 0; i < sl.size(); i++) {
-        cout << "**********Land sample number " << i + 1 << " **********" << endl;
         sl[i]->xuat();
         cout << endl;
     }

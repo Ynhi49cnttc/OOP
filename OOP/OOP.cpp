@@ -2,7 +2,6 @@
 #include<vector>
 #include<math.h>
 #include<string>
-#include<bits/stdc++.h>
 using namespace std;
 # define M_PI           3.14159265358979323846  /* pi */
 //Create a land sales class

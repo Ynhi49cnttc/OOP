@@ -95,7 +95,6 @@ int main() {
     vector<SellingLand*> sl;
     while (cin >> ch) {
         cin.ignore();
-
         getline(cin, name);
         getline(cin, address);
         if (ch == 'C') {
@@ -108,11 +107,10 @@ int main() {
             cin >> a >> b >> c >> d;
             sl.push_back(new Quadrilateral(name, address, a, b, c, d));
         }
-        cout << endl;
-
     }
 
     for (int i = 0; i < sl.size(); i++) {
+        cout << i + 1<<", ";
         sl[i]->xuat();
         cout << endl;
     }
